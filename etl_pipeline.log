@@ -1,0 +1,24 @@
+2025-10-10 23:49:09,493 - INFO - ======================================================================
+2025-10-10 23:49:09,493 - INFO - Nike Sales ETL Pipeline Started
+2025-10-10 23:49:09,493 - INFO - ======================================================================
+2025-10-10 23:49:09,493 - INFO - Starting data extraction from: ../data/Nike_Sales_Uncleaned.csv
+2025-10-10 23:49:09,493 - ERROR - ❌ Extraction failed: File not found: ../data/Nike_Sales_Uncleaned.csv
+2025-10-10 23:49:09,493 - ERROR - 
+❌ ETL Pipeline Failed: File not found: ../data/Nike_Sales_Uncleaned.csv
+2025-10-10 23:49:09,493 - ERROR - ======================================================================
+2025-10-10 23:57:23,665 - INFO - ======================================================================
+2025-10-10 23:57:23,666 - INFO - Nike Sales ETL Pipeline Started
+2025-10-10 23:57:23,666 - INFO - ======================================================================
+2025-10-10 23:57:23,666 - INFO - Starting data extraction from: ../data/Nike_Sales_Uncleaned.csv
+2025-10-10 23:57:23,666 - ERROR - ❌ Extraction failed: File not found: ../data/Nike_Sales_Uncleaned.csv
+2025-10-10 23:57:23,666 - ERROR - 
+❌ ETL Pipeline Failed: File not found: ../data/Nike_Sales_Uncleaned.csv
+2025-10-10 23:57:23,666 - ERROR - ======================================================================
+2025-10-10 23:58:04,978 - INFO - ======================================================================
+2025-10-10 23:58:04,979 - INFO - Nike Sales ETL Pipeline Started
+2025-10-10 23:58:04,979 - INFO - ======================================================================
+2025-10-10 23:58:04,979 - INFO - Starting data extraction from: ../data/Nike_Sales_Uncleaned.csv
+2025-10-10 23:58:04,979 - ERROR - ❌ Extraction failed: File not found: ../data/Nike_Sales_Uncleaned.csv
+2025-10-10 23:58:04,979 - ERROR - 
+❌ ETL Pipeline Failed: File not found: ../data/Nike_Sales_Uncleaned.csv
+2025-10-10 23:58:04,979 - ERROR - ======================================================================
