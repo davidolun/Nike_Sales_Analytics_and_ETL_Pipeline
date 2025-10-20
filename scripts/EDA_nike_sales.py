@@ -1,29 +1,4 @@
-# Nike Sales Business Analysis
-# Complete EDA with Business-Driven Insights
 
-# %% [markdown]
-# # 👟 Nike Sales Business Intelligence Dashboard
-# 
-# **Objective:** Analyze Nike sales data to identify revenue opportunities, optimize pricing strategy, and provide actionable recommendations for business growth.
-# 
-# **Data Source:** Nike Sales Database (ETL Pipeline Output)  
-# **Analysis Period:** [Your Date Range]  
-# **Analyst:** [Your Name]
-
-# %% [markdown]
-# ## 📋 Table of Contents
-# 1. [Executive Summary](#executive-summary)
-# 2. [Data Loading & Validation](#data-loading)
-# 3. [Business Performance Overview](#business-overview)
-# 4. [Regional Performance Analysis](#regional-analysis)
-# 5. [Product Line Strategy](#product-analysis)
-# 6. [Pricing & Discount Optimization](#pricing-analysis)
-# 7. [Customer Behavior Analysis](#customer-analysis)
-# 8. [Time-Based Trends](#time-analysis)
-# 9. [Recommendations & Action Items](#recommendations)
-
-# %%
-# Import Libraries
 import pandas as pd
 import numpy as np
 import sqlite3

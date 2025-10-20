@@ -524,3 +524,230 @@
 ======================================================================
 2025-10-13 11:54:36,162 - INFO - 🎉 ETL Pipeline Completed Successfully in 0.05 seconds
 2025-10-13 11:54:36,163 - INFO - ======================================================================
+2025-10-19 23:41:21,640 - INFO - ======================================================================
+2025-10-19 23:41:21,640 - INFO - Nike Sales ETL Pipeline Started
+2025-10-19 23:41:21,640 - INFO - ======================================================================
+2025-10-19 23:41:21,640 - INFO - Starting data extraction from: /Users/wavy/Documents/portfolio/nike_data_analysis/data/Nike_Sales_Uncleaned.csv
+2025-10-19 23:41:21,643 - INFO - ✅ Successfully extracted 2,500 records
+2025-10-19 23:41:21,643 - INFO -    Columns: ['Order_ID', 'Gender_Category', 'Product_Line', 'Product_Name', 'Size', 'Units_Sold', 'MRP', 'Discount_Applied', 'Revenue', 'Order_Date', 'Sales_Channel', 'Region', 'Profit']
+2025-10-19 23:41:21,644 - INFO -    Memory usage: 1.02 MB
+2025-10-19 23:41:21,644 - INFO - 
+======================================================================
+2025-10-19 23:41:21,644 - INFO - Starting Data Transformation
+2025-10-19 23:41:21,644 - INFO - ======================================================================
+2025-10-19 23:41:21,644 - INFO - 
+[Step 1/10] Handling missing values...
+2025-10-19 23:41:21,648 - INFO -    Filled 5283 missing values
+2025-10-19 23:41:21,648 - INFO - 
+[Step 2/10] Removing duplicate Order_IDs...
+2025-10-19 23:41:21,648 - INFO -    Removed 114 duplicate records
+2025-10-19 23:41:21,648 - INFO - 
+[Step 3/10] Standardizing Region names...
+2025-10-19 23:41:21,649 - INFO -    Before: ['bengaluru', 'Hyd', 'Mumbai', 'Pune', 'Delhi', 'Bangalore', 'Hyderabad', 'hyderbad', 'Kolkata']
+2025-10-19 23:41:21,649 - INFO -    After: ['Bangalore', 'Hyderabad', 'Mumbai', 'Pune', 'Delhi', 'Kolkata']
+2025-10-19 23:41:21,649 - INFO - 
+[Step 4/10] Flagging negative profit transactions...
+2025-10-19 23:41:21,649 - INFO -    Identified 544 loss-making transactions
+2025-10-19 23:41:21,649 - INFO - 
+[Step 5/10] Validating Units_Sold and recalculating Revenue...
+2025-10-19 23:41:21,650 - INFO -    Corrected 192 negative Units_Sold values
+2025-10-19 23:41:21,650 - INFO -    Recalculated Revenue for all records
+2025-10-19 23:41:21,650 - INFO - 
+[Step 6/10] Standardizing Product_Line and Gender_Category...
+2025-10-19 23:41:21,651 - INFO -    Product Lines: ['Training', 'Soccer', 'Lifestyle', 'Running', 'Basketball']
+2025-10-19 23:41:21,651 - INFO -    Gender Categories: ['Kids', 'Women', 'Men']
+2025-10-19 23:41:21,651 - INFO - 
+[Step 7/10] Converting data types...
+2025-10-19 23:41:21,652 - INFO -    Converted 5 columns to numeric types
+2025-10-19 23:41:21,652 - INFO - 
+[Step 8/10] Removing revenue outliers (IQR method)...
+2025-10-19 23:41:21,653 - INFO -    Q1: ₹6,110.03, Q3: ₹14,039.22, IQR: ₹7,929.18
+2025-10-19 23:41:21,653 - INFO -    Bounds: [₹-5,783.75, ₹25,932.99]
+2025-10-19 23:41:21,653 - INFO -    Removed 47 outlier records
+2025-10-19 23:41:21,653 - INFO - 
+[Step 9/10] Removing zero Units_Sold records...
+2025-10-19 23:41:21,653 - INFO -    Removed 216 records with zero units
+2025-10-19 23:41:21,653 - INFO - 
+[Step 10/10] Adding ETL metadata...
+2025-10-19 23:41:21,654 - INFO -    Added timestamp and version tracking
+2025-10-19 23:41:21,654 - INFO - 
+----------------------------------------------------------------------
+2025-10-19 23:41:21,654 - INFO - ✅ Transformation Complete
+2025-10-19 23:41:21,654 - INFO -    Initial records: 2,500
+2025-10-19 23:41:21,654 - INFO -    Final records: 2,123
+2025-10-19 23:41:21,654 - INFO -    Records removed: 377
+2025-10-19 23:41:21,654 - INFO -    Retention rate: 84.92%
+2025-10-19 23:41:21,654 - INFO - ----------------------------------------------------------------------
+2025-10-19 23:41:21,654 - INFO - 
+======================================================================
+2025-10-19 23:41:21,654 - INFO - Running Data Quality Validation
+2025-10-19 23:41:21,654 - INFO - ======================================================================
+2025-10-19 23:41:21,654 - INFO - ✅ No nulls in critical columns
+2025-10-19 23:41:21,655 - INFO - ✅ All Order_IDs are unique
+2025-10-19 23:41:21,655 - INFO - ✅ Units_Sold range: [1.0, 4.0]
+2025-10-19 23:41:21,655 - INFO - ✅ MRP range: [₹2,006.63, ₹9,972.81]
+2025-10-19 23:41:21,655 - INFO - ✅ All regions are valid: ['Bangalore', 'Hyderabad', 'Mumbai', 'Pune', 'Delhi', 'Kolkata']
+2025-10-19 23:41:21,655 - INFO - ✅ Discount range: [0.0%, 1.25%]
+2025-10-19 23:41:21,655 - INFO - ✅ Revenue calculations are consistent
+2025-10-19 23:41:21,655 - INFO - 
+======================================================================
+2025-10-19 23:41:21,655 - INFO - 🎉 All Data Quality Checks Passed!
+2025-10-19 23:41:21,655 - INFO - ======================================================================
+2025-10-19 23:41:21,655 - INFO - 
+======================================================================
+2025-10-19 23:41:21,655 - INFO - Starting Data Load
+2025-10-19 23:41:21,655 - INFO - ======================================================================
+2025-10-19 23:41:21,655 - INFO - Loading data to CSV: /Users/wavy/Documents/portfolio/nike_data_analysis/data/Nike_Sales_Cleaned.csv
+2025-10-19 23:41:21,665 - INFO - ✅ Saved 2,123 records to CSV (288.96 KB)
+2025-10-19 23:41:21,665 - INFO - Loading data to database: /Users/wavy/Documents/portfolio/nike_data_analysis/data/nike_sales.db
+2025-10-19 23:41:21,675 - INFO - ✅ Loaded 2,123 records to table 'nike_sales_cleaned'
+2025-10-19 23:41:21,677 - INFO - ✅ Created indexes on Order_Date and Region
+2025-10-19 23:41:21,677 - INFO - ======================================================================
+2025-10-19 23:41:21,678 - INFO - 
+======================================================================
+2025-10-19 23:41:21,678 - INFO - ETL PIPELINE SUMMARY REPORT
+2025-10-19 23:41:21,678 - INFO - ======================================================================
+2025-10-19 23:41:21,678 - INFO - 
+📊 Data Processing Metrics:
+2025-10-19 23:41:21,678 - INFO -    Records Extracted: 2,500
+2025-10-19 23:41:21,678 - INFO -    Records Loaded: 2,123
+2025-10-19 23:41:21,678 - INFO -    Records Removed: 377 (15.08%)
+2025-10-19 23:41:21,678 - INFO - 
+💰 Business Metrics:
+2025-10-19 23:41:21,678 - INFO -    Total Revenue: ₹25,892,658.39
+2025-10-19 23:41:21,678 - INFO -    Total Profit: ₹2,957,764.11
+2025-10-19 23:41:21,678 - INFO -    Avg Profit Margin: 11.42%
+2025-10-19 23:41:21,678 - INFO -    Loss Transactions: 483 (22.75%)
+2025-10-19 23:41:21,678 - INFO - 
+🏪 Regional Distribution:
+2025-10-19 23:41:21,678 - INFO -    Mumbai: 374 (17.6%)
+2025-10-19 23:41:21,678 - INFO -    Delhi: 367 (17.3%)
+2025-10-19 23:41:21,678 - INFO -    Bangalore: 362 (17.1%)
+2025-10-19 23:41:21,679 - INFO -    Hyderabad: 347 (16.3%)
+2025-10-19 23:41:21,679 - INFO -    Kolkata: 344 (16.2%)
+2025-10-19 23:41:21,679 - INFO -    Pune: 329 (15.5%)
+2025-10-19 23:41:21,679 - INFO - 
+👕 Product Line Distribution:
+2025-10-19 23:41:21,679 - INFO -    Training: 469 (22.1%)
+2025-10-19 23:41:21,679 - INFO -    Basketball: 434 (20.4%)
+2025-10-19 23:41:21,679 - INFO -    Lifestyle: 418 (19.7%)
+2025-10-19 23:41:21,679 - INFO -    Soccer: 408 (19.2%)
+2025-10-19 23:41:21,679 - INFO -    Running: 394 (18.6%)
+2025-10-19 23:41:21,679 - INFO - 
+======================================================================
+2025-10-19 23:41:21,679 - INFO - 
+======================================================================
+2025-10-19 23:41:21,679 - INFO - 🎉 ETL Pipeline Completed Successfully in 0.04 seconds
+2025-10-19 23:41:21,679 - INFO - ======================================================================
+2025-10-19 23:52:06,913 - INFO - ======================================================================
+2025-10-19 23:52:06,913 - INFO - Nike Sales ETL Pipeline Started
+2025-10-19 23:52:06,913 - INFO - ======================================================================
+2025-10-19 23:52:06,913 - INFO - Starting data extraction from: /Users/wavy/Documents/portfolio/nike_data_analysis/data/Nike_Sales_Uncleaned.csv
+2025-10-19 23:52:06,916 - INFO - Successfully extracted 2,500 records
+2025-10-19 23:52:06,916 - INFO -    Columns: ['Order_ID', 'Gender_Category', 'Product_Line', 'Product_Name', 'Size', 'Units_Sold', 'MRP', 'Discount_Applied', 'Revenue', 'Order_Date', 'Sales_Channel', 'Region', 'Profit']
+2025-10-19 23:52:06,918 - INFO -    Memory usage: 1.02 MB
+2025-10-19 23:52:06,918 - INFO - 
+======================================================================
+2025-10-19 23:52:06,918 - INFO - Starting Data Transformation
+2025-10-19 23:52:06,918 - INFO - ======================================================================
+2025-10-19 23:52:06,918 - INFO - 
+[Step 1/10] Handling missing values...
+2025-10-19 23:52:06,921 - INFO -    Filled 5283 missing values
+2025-10-19 23:52:06,921 - INFO - 
+[Step 2/10] Removing duplicate Order_IDs...
+2025-10-19 23:52:06,922 - INFO -    Removed 114 duplicate records
+2025-10-19 23:52:06,922 - INFO - 
+[Step 3/10] Standardizing Region names...
+2025-10-19 23:52:06,923 - INFO -    Before: ['bengaluru', 'Hyd', 'Mumbai', 'Pune', 'Delhi', 'Bangalore', 'Hyderabad', 'hyderbad', 'Kolkata']
+2025-10-19 23:52:06,923 - INFO -    After: ['Bangalore', 'Hyderabad', 'Mumbai', 'Pune', 'Delhi', 'Kolkata']
+2025-10-19 23:52:06,923 - INFO - 
+[Step 4/10] Flagging negative profit transactions...
+2025-10-19 23:52:06,924 - INFO -    Identified 544 loss-making transactions
+2025-10-19 23:52:06,924 - INFO - 
+[Step 5/10] Validating Units_Sold and recalculating Revenue...
+2025-10-19 23:52:06,924 - INFO -    Corrected 192 negative Units_Sold values
+2025-10-19 23:52:06,924 - INFO -    Recalculated Revenue for all records
+2025-10-19 23:52:06,924 - INFO - 
+[Step 6/10] Standardizing Product_Line and Gender_Category...
+2025-10-19 23:52:06,925 - INFO -    Product Lines: ['Training', 'Soccer', 'Lifestyle', 'Running', 'Basketball']
+2025-10-19 23:52:06,925 - INFO -    Gender Categories: ['Kids', 'Women', 'Men']
+2025-10-19 23:52:06,925 - INFO - 
+[Step 7/10] Converting data types...
+2025-10-19 23:52:06,926 - INFO -    Converted 5 columns to numeric types
+2025-10-19 23:52:06,926 - INFO - 
+[Step 8/10] Removing revenue outliers (IQR method)...
+2025-10-19 23:52:06,926 - INFO -    Q1: ₹6,110.03, Q3: ₹14,039.22, IQR: ₹7,929.18
+2025-10-19 23:52:06,926 - INFO -    Bounds: [₹-5,783.75, ₹25,932.99]
+2025-10-19 23:52:06,926 - INFO -    Removed 47 outlier records
+2025-10-19 23:52:06,926 - INFO - 
+[Step 9/10] Removing zero Units_Sold records...
+2025-10-19 23:52:06,927 - INFO -    Removed 216 records with zero units
+2025-10-19 23:52:06,927 - INFO - 
+[Step 10/10] Adding ETL metadata...
+2025-10-19 23:52:06,927 - INFO -    Added timestamp and version tracking
+2025-10-19 23:52:06,927 - INFO - 
+----------------------------------------------------------------------
+2025-10-19 23:52:06,927 - INFO - Transformation Complete
+2025-10-19 23:52:06,927 - INFO -    Initial records: 2,500
+2025-10-19 23:52:06,927 - INFO -    Final records: 2,123
+2025-10-19 23:52:06,927 - INFO -    Records removed: 377
+2025-10-19 23:52:06,927 - INFO -    Retention rate: 84.92%
+2025-10-19 23:52:06,927 - INFO - ----------------------------------------------------------------------
+2025-10-19 23:52:06,927 - INFO - 
+======================================================================
+2025-10-19 23:52:06,927 - INFO - Running Data Quality Validation
+2025-10-19 23:52:06,927 - INFO - ======================================================================
+2025-10-19 23:52:06,927 - INFO - No nulls in critical columns
+2025-10-19 23:52:06,927 - INFO - All Order_IDs are unique
+2025-10-19 23:52:06,928 - INFO - Units_Sold range: [1.0, 4.0]
+2025-10-19 23:52:06,928 - INFO - MRP range: [₹2,006.63, ₹9,972.81]
+2025-10-19 23:52:06,928 - INFO - All regions are valid: ['Bangalore', 'Hyderabad', 'Mumbai', 'Pune', 'Delhi', 'Kolkata']
+2025-10-19 23:52:06,928 - INFO - Discount range: [0.0%, 1.25%]
+2025-10-19 23:52:06,928 - INFO - Revenue calculations are consistent
+2025-10-19 23:52:06,929 - INFO - 
+======================================================================
+2025-10-19 23:52:06,929 - INFO - All Data Quality Checks Passed!
+2025-10-19 23:52:06,929 - INFO - ======================================================================
+2025-10-19 23:52:06,929 - INFO - 
+======================================================================
+2025-10-19 23:52:06,929 - INFO - Starting Data Load
+2025-10-19 23:52:06,929 - INFO - ======================================================================
+2025-10-19 23:52:06,929 - INFO - Loading data to CSV: /Users/wavy/Documents/portfolio/nike_data_analysis/data/Nike_Sales_Cleaned.csv
+2025-10-19 23:52:06,940 - INFO - Saved 2,123 records to CSV (288.96 KB)
+2025-10-19 23:52:06,940 - INFO - ======================================================================
+2025-10-19 23:52:06,940 - INFO - 
+======================================================================
+2025-10-19 23:52:06,940 - INFO - ETL PIPELINE SUMMARY REPORT
+2025-10-19 23:52:06,940 - INFO - ======================================================================
+2025-10-19 23:52:06,940 - INFO - 
+Data Processing Metrics:
+2025-10-19 23:52:06,940 - INFO -    Records Extracted: 2,500
+2025-10-19 23:52:06,940 - INFO -    Records Loaded: 2,123
+2025-10-19 23:52:06,940 - INFO -    Records Removed: 377 (15.08%)
+2025-10-19 23:52:06,940 - INFO - 
+Business Metrics:
+2025-10-19 23:52:06,940 - INFO -    Total Revenue: ₹25,892,658.39
+2025-10-19 23:52:06,940 - INFO -    Total Profit: ₹2,957,764.11
+2025-10-19 23:52:06,940 - INFO -    Avg Profit Margin: 11.42%
+2025-10-19 23:52:06,940 - INFO -    Loss Transactions: 483 (22.75%)
+2025-10-19 23:52:06,940 - INFO - 
+🏪 Regional Distribution:
+2025-10-19 23:52:06,940 - INFO -    Mumbai: 374 (17.6%)
+2025-10-19 23:52:06,940 - INFO -    Delhi: 367 (17.3%)
+2025-10-19 23:52:06,940 - INFO -    Bangalore: 362 (17.1%)
+2025-10-19 23:52:06,940 - INFO -    Hyderabad: 347 (16.3%)
+2025-10-19 23:52:06,940 - INFO -    Kolkata: 344 (16.2%)
+2025-10-19 23:52:06,940 - INFO -    Pune: 329 (15.5%)
+2025-10-19 23:52:06,940 - INFO - 
+👕 Product Line Distribution:
+2025-10-19 23:52:06,940 - INFO -    Training: 469 (22.1%)
+2025-10-19 23:52:06,940 - INFO -    Basketball: 434 (20.4%)
+2025-10-19 23:52:06,941 - INFO -    Lifestyle: 418 (19.7%)
+2025-10-19 23:52:06,941 - INFO -    Soccer: 408 (19.2%)
+2025-10-19 23:52:06,941 - INFO -    Running: 394 (18.6%)
+2025-10-19 23:52:06,941 - INFO - 
+======================================================================
+2025-10-19 23:52:06,941 - INFO - 
+======================================================================
+2025-10-19 23:52:06,941 - INFO - ETL Pipeline Completed Successfully in 0.03 seconds
+2025-10-19 23:52:06,941 - INFO - ======================================================================
