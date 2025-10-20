@@ -2,21 +2,12 @@
 
 ## 📊 Project Overview
 
-This comprehensive end-to-end data project transforms raw Nike sales data (2,123 transactions worth ₹25.9M) into actionable business insights through advanced ETL processes, exploratory data analysis, and interactive visualizations. The project demonstrates complete data science capabilities from data cleaning and validation to executive-level business intelligence reporting, featuring automated ETL pipelines with comprehensive error handling, statistical analysis revealing regional performance patterns and seasonal trends, interactive Tableau dashboards with real-time KPIs, and professional-grade visualizations using Python libraries. Key business insights include identifying ₹884K revenue optimization potential through AOV standardization, discovering 1.7% profit margin improvement opportunities, and uncovering seasonal risk mitigation strategies for the 77.6% December revenue concentration. The project delivers quantifiable business value through strategic recommendations, executive summaries with actionable insights, and a complete portfolio-ready solution that showcases both technical proficiency in data engineering, analytics, and visualization, as well as business acumen in converting technical findings into strategic recommendations for stakeholders.
+This comprehensive data analysis project transforms raw Nike sales data into actionable business insights through advanced ETL processes, exploratory data analysis, and interactive visualizations. The project demonstrates end-to-end data science capabilities from data cleaning to executive-level business intelligence reporting.
 
-### Executive Dashboard
-[📈 **Live Tableau Dashboard**](https://public.tableau.com/app/profile/david.david2785/viz/Book1_17607576600600/Dashboard1)
-
-![Dashboard Screenshot](outputs/dashboard_overview.png)
-  
 **🎯 Business Impact:** Analyzed 2,123 transactions worth ₹25.9M in revenue, identifying optimization opportunities that could improve profit margins by 1.7% through regional strategy adjustments and seasonal planning.
 
 ---
 
-### Executive Dashboard
-[📈 **Live Tableau Dashboard**](https://public.tableau.com/app/profile/david.david2785/viz/Book1_17607576600600/Dashboard1)
-
-  
 ## 🛠️ Technologies & Tools Used
 
 **Data Processing & Analysis:**
@@ -103,7 +94,7 @@ The raw dataset contained **2,123 transactions** across multiple dimensions:
 
 ## 🎯 Key Business Insights & Data Storytelling
 
-### 🏆 The Regional Revenue  Trend
+### 🏆 The Regional Revenue Champions Story
 
 **The Discovery:** Mumbai emerged as the revenue leader, generating ₹4.6M in total sales - 3.6% higher than second-place Bangalore, demonstrating relatively balanced regional performance.
 
@@ -114,8 +105,6 @@ The raw dataset contained **2,123 transactions** across multiple dimensions:
 - **Market Maturity:** Established retail ecosystem with premium positioning
 
 **The Opportunity:** While Mumbai leads, the close competition (₹4.6M vs ₹4.4M) suggests untapped potential in other regions through strategic investment.
-![Regional Performance](outputs/regional_performance.png)
-
 
 ### 💰 The Profit vs Revenue Paradox
 
@@ -137,14 +126,14 @@ The raw dataset contained **2,123 transactions** across multiple dimensions:
 - **December:** ₹20.1M revenue (77.6% of total annual sales)
 - **Peak vs. Trough:** 5,269% difference between December and October
 - **The Opportunity:** Massive concentration suggests potential for better year-round distribution
-![Revenue Trend with Time](outputs/revenue_trend.png)
+
 **The Seasonal Challenge:**
 - **October:** Lowest sales month with only ₹374K
 - **Year-round Consistency:** Need for strategies to smooth seasonal peaks and valleys
 
 **Business Recommendation:** Develop year-round engagement strategies to reduce dependency on December sales and create more consistent revenue streams.
 
-###  The Product Performance 
+### 👟 The Product Performance Chronicles
 
 **The Training Revolution:** Training products lead the market, demonstrating strong performance across all metrics.
 
@@ -152,7 +141,6 @@ The raw dataset contained **2,123 transactions** across multiple dimensions:
 1. **Training Products:** ₹5.7M revenue (22.0% of total) with 11.3% profit margin
 2. **Basketball Products:** ₹5.3M revenue (20.5% of total) with 11.0% profit margin
 3. **Lifestyle Products:** ₹5.1M revenue (19.9% of total) with 11.4% profit margin
-![Revenue Trend with Time](outputs/Product_category.png)
 
 **The Balanced Portfolio:**
 - **Soccer Products:** Strong performance with 12.0% profit margin (highest)
@@ -168,7 +156,6 @@ The raw dataset contained **2,123 transactions** across multiple dimensions:
 - **Online AOV:** ₹12,294 per transaction
 - **Retail AOV:** ₹12,101 per transaction
 - **Strategic Insight:** Both channels perform similarly, suggesting strong omnichannel presence
-![Revenue Trend with Time](outputs/Online_vs_Retail.png)
 
 **The Regional AOV Story:**
 - **Highest AOV:** Hyderabad with ₹12,639 per transaction
@@ -192,10 +179,6 @@ The raw dataset contained **2,123 transactions** across multiple dimensions:
 ---
 
 ## 📊 Dashboard Architecture & Visualizations
-### Executive Dashboard
-[📈 **Live Tableau Dashboard**](https://public.tableau.com/app/profile/david.david2785/viz/Book1_17607576600600/Dashboard1)
-
-![Dashboard Screenshot](outputs/dashboard_overview.png)
 
 ### Executive KPI Dashboard
 **The Command Center:** A comprehensive dashboard providing real-time insights into business performance.
@@ -329,10 +312,10 @@ nike_data_analysis/
 
 This project demonstrates comprehensive data science capabilities including data engineering, statistical analysis, business intelligence, and strategic consulting. The combination of technical expertise and business acumen showcased here represents the kind of value-driven analytics that drives modern business success.
 
-**🔗 Portfolio Link:** [https://davidolunloyo.onrender.com/]
-**📧 Contact:** [olunloyooladipupo@gmail.com]
-**💼 LinkedIn:** [https://www.linkedin.com/in/oladipupo-olunloyo-david/]
+**🔗 Portfolio Link:** [Your Portfolio URL]
+**📧 Contact:** [Your Email]
+**💼 LinkedIn:** [Your LinkedIn Profile]
 
 ---
 
-*This project was developed as part of a comprehensive data portfolio, demonstrating the ability to transform raw data into strategic business intelligence that drives measurable results.*
+*This project was developed as part of a comprehensive data science portfolio, demonstrating the ability to transform raw data into strategic business intelligence that drives measurable results.*
