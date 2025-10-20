@@ -1,22 +1,22 @@
-# 🏃‍♂️ Nike Sales Data Analysis & Business Intelligence Dashboard
+# Nike Sales Data Analysis & Business Intelligence Dashboard
 
-## 📊 Project Overview
+## Project Overview
 
 This comprehensive end-to-end data project transforms raw Nike sales data (2,123 transactions worth ₹25.9M) into actionable business insights through advanced ETL processes, exploratory data analysis, and interactive visualizations. The project demonstrates complete data science capabilities from data cleaning and validation to executive-level business intelligence reporting, featuring automated ETL pipelines with comprehensive error handling, statistical analysis revealing regional performance patterns and seasonal trends, interactive Tableau dashboards with real-time KPIs, and professional-grade visualizations using Python libraries. Key business insights include identifying ₹884K revenue optimization potential through AOV standardization, discovering 1.7% profit margin improvement opportunities, and uncovering seasonal risk mitigation strategies for the 77.6% December revenue concentration. The project delivers quantifiable business value through strategic recommendations, executive summaries with actionable insights, and a complete portfolio-ready solution that showcases both technical proficiency in data engineering, analytics, and visualization, as well as business acumen in converting technical findings into strategic recommendations for stakeholders.
 
 ### Executive Dashboard
-[📈 **Live Tableau Dashboard**](https://public.tableau.com/app/profile/david.david2785/viz/Book1_17607576600600/Dashboard1)
+[**Live Tableau Dashboard**](https://public.tableau.com/app/profile/david.david2785/viz/Book1_17607576600600/Dashboard1)
 
 ![Dashboard Screenshot](outputs/dashboard_overview.png)
   
-**🎯 Business Impact:** Analyzed 2,123 transactions worth ₹25.9M in revenue, identifying optimization opportunities that could improve profit margins by 1.7% through regional strategy adjustments and seasonal planning.
+**Business Impact:** Analyzed 2,123 transactions worth ₹25.9M in revenue, identifying optimization opportunities that could improve profit margins by 1.7% through regional strategy adjustments and seasonal planning.
 
 ---
 
 
 
   
-## 🛠️ Technologies & Tools Used
+## Technologies & Tools Used
 
 **Data Processing & Analysis:**
 - **Python 3.12** - Core programming language
@@ -43,22 +43,22 @@ This comprehensive end-to-end data project transforms raw Nike sales data (2,123
 
 ---
 
-## 📈 Dataset Overview
+## Dataset Overview
 
 ### Original Data Structure
 The raw dataset contained **2,123 transactions** across multiple dimensions:
 
 | Column | Data Type | Description | Issues Found |
 |--------|-----------|-------------|--------------|
-| `Order_ID` | Integer | Unique transaction identifier | ✅ Clean |
-| `Product_Name` | String | Nike product name | ✅ Clean |
-| `Product_Category` | String | Product classification | ✅ Clean |
-| `Region` | String | Geographic sales region | ✅ Clean |
-| `Order_Date` | String | Transaction date | ⚠️ Format issues |
-| `Units_Sold` | Integer | Quantity purchased | ⚠️ Negative values |
-| `Unit_Price` | Float | Price per unit | ⚠️ Inconsistent currency |
-| `MRP` | Float | Maximum Retail Price | ⚠️ Missing values |
-| `Discount_Applied` | Float | Discount percentage | ⚠️ Invalid percentages |
+| `Order_ID` | Integer | Unique transaction identifier | Clean |
+| `Product_Name` | String | Nike product name | Clean |
+| `Product_Category` | String | Product classification | Clean |
+| `Region` | String | Geographic sales region | Clean |
+| `Order_Date` | String | Transaction date | Format issues |
+| `Units_Sold` | Integer | Quantity purchased | Negative values |
+| `Unit_Price` | Float | Price per unit | Inconsistent currency |
+| `MRP` | Float | Maximum Retail Price | Missing values |
+| `Discount_Applied` | Float | Discount percentage | Invalid percentages |
 
 ### Data Quality Challenges Identified
 - **Date Format Inconsistencies:** Mixed formats (MM/DD/YYYY, DD-MM-YYYY)
@@ -69,7 +69,7 @@ The raw dataset contained **2,123 transactions** across multiple dimensions:
 
 ---
 
-## 🔧 ETL Pipeline & Data Cleaning Process
+## ETL Pipeline & Data Cleaning Process
 
 ### Phase 1: Data Extraction & Initial Assessment
 ```python
@@ -96,15 +96,15 @@ The raw dataset contained **2,123 transactions** across multiple dimensions:
 - **Integrity Verification:** Revenue calculations validated
 - **Outlier Treatment:** Extreme values flagged for business review
 
-**📊 Final Clean Dataset:** 2,123 high-quality transactions ready for analysis
+**Final Clean Dataset:** 2,123 high-quality transactions ready for analysis
 
-**ETL Pipeline:** Located in `scripts/etl_pipeline_nike_sales.py` - Automated data cleaning and validation pipeline
-*Automated data cleaning, validation, and processing pipeline with comprehensive logging and monitoring*
+ETL Pipeline:** Located in `scripts/etl_pipeline_nike_sales.py` - Automated data cleaning and validation pipeline
+Automated data cleaning, validation, and processing pipeline with comprehensive logging and monitoring*
 ---
 
-## 🎯 Key Business Insights & Data Storytelling
+## Key Business Insights & Data Storytelling
 
-### 🏆 The Regional Revenue  Trend
+### The Regional Revenue Trend
 
 **The Discovery:** Mumbai emerged as the revenue leader, generating ₹4.6M in total sales - 3.6% higher than second-place Bangalore, demonstrating relatively balanced regional performance.
 
@@ -118,7 +118,7 @@ The raw dataset contained **2,123 transactions** across multiple dimensions:
 ![Regional Performance](outputs/regional_performance.png)
 
 
-### 💰 The Profit vs Revenue Paradox
+### The Profit vs Revenue Paradox
 
 **The Key Discovery:** Revenue leaders don't always translate to profit leaders. Our analysis revealed interesting profitability patterns across regions.
 
@@ -130,7 +130,7 @@ The raw dataset contained **2,123 transactions** across multiple dimensions:
 
 **Strategic Insight:** Hyderabad demonstrates that high revenue doesn't guarantee optimal profitability - targeted margin improvement could unlock significant value.
 
-### 📈 The Seasonal Sales Symphony
+### The Seasonal Sales Symphony
 
 **The Dramatic Pattern:** Sales show extreme seasonal variation, with December dominating the entire year's performance.
 
@@ -160,7 +160,7 @@ The raw dataset contained **2,123 transactions** across multiple dimensions:
 - **Running Products:** Solid contribution with 11.4% profit margin
 - **The Opportunity:** All categories show similar performance, suggesting room for targeted growth strategies
 
-### 🎯 The Customer Behavior Intelligence
+### The Customer Behavior Intelligence
 
 **The Transaction Psychology:** Our data reveals fascinating patterns in how customers interact with the Nike brand across different channels.
 
@@ -176,7 +176,7 @@ The raw dataset contained **2,123 transactions** across multiple dimensions:
 - **Lowest AOV:** Delhi with ₹11,755 per transaction
 - **The Opportunity:** 7.5% AOV variation across regions suggests optimization potential
 
-### 📊 The AOV (Average Order Value) Story
+### The AOV (Average Order Value) Story
 
 **The Number That Matters:** Our analysis reveals that regional AOV optimization could unlock significant revenue potential.
 
@@ -192,9 +192,9 @@ The raw dataset contained **2,123 transactions** across multiple dimensions:
 
 ---
 
-## 📊 Dashboard Architecture & Visualizations
+## Dashboard Architecture & Visualizations
 ### Executive Dashboard
-[📈 **Live Tableau Dashboard**](https://public.tableau.com/app/profile/david.david2785/viz/Book1_17607576600600/Dashboard1)
+[**Live Tableau Dashboard**](https://public.tableau.com/app/profile/david.david2785/viz/Book1_17607576600600/Dashboard1)
 
 ![Dashboard Screenshot](outputs/dashboard_overview.png)
 
@@ -232,7 +232,7 @@ The raw dataset contained **2,123 transactions** across multiple dimensions:
 
 ---
 
-## 🎯 Business Recommendations & Strategic Impact
+## Business Recommendations & Strategic Impact
 
 ### Immediate Actions (0-3 months)
 1. **Hyderabad Profit Optimization:** Address 10.3% profit margin (lowest) to match Kolkata's 12.0%
@@ -251,7 +251,7 @@ The raw dataset contained **2,123 transactions** across multiple dimensions:
 
 ---
 
-## 📈 Project Impact & Results
+## Project Impact & Results
 
 ### Quantifiable Business Value
 - **Revenue Optimization Potential:** ₹884K additional revenue through AOV standardization across regions
@@ -267,7 +267,7 @@ The raw dataset contained **2,123 transactions** across multiple dimensions:
 
 ---
 
-## 🚀 Future Enhancements & Roadmap
+## Future Enhancements & Roadmap
 
 ### Phase 2: Advanced Analytics
 - **Predictive Modeling:** Customer lifetime value prediction
@@ -281,33 +281,33 @@ The raw dataset contained **2,123 transactions** across multiple dimensions:
 
 ---
 
-## 📁 Project Structure
+## Project Structure
 
 ```
 nike_data_analysis/
-├── 📁 data/
+├── data/
 │   ├── Nike_Sales_Cleaned.csv          # Final processed dataset
 │   └── Nike_Sales_Uncleaned.csv        # Original raw data
-├── 📁 notebooks/
+├── notebooks/
 │   ├── Nike_Data_EDA.ipynb             # Main exploratory analysis
 │   ├── Nike_Data_Storytelling.ipynb    # Advanced business insights
 │   └── ETL_and_Data_Cleaning.ipynb     # Data processing pipeline
-├── 📁 scripts/
+├── scripts/
 │   ├── etl_pipeline_nike_sales.py      # Automated ETL process
 │   └── eda.py                          # Exploratory analysis functions
-├── 📁 dashboards/
+├── dashboards/
 │   └── Dashboard.twbx                  # Tableau business intelligence dashboard
-├── 📁 outputs/
+├── outputs/
 │   ├── dashboard_overview.png          # Executive dashboard screenshot
 │   ├── revenue_trend.png               # Revenue trend analysis
 │   ├── regional_performance.png        # Geographic performance insights
 │   └── Profit Analysis.png             # Profitability analysis
-└── 📄 README.md                        # This comprehensive documentation
+└── README.md                        # This comprehensive documentation
 ```
 
 ---
 
-## 🎓 Learning Outcomes & Skills Demonstrated
+## Learning Outcomes & Skills Demonstrated
 
 ### Technical Skills
 - **Data Engineering:** End-to-end ETL pipeline development
@@ -326,13 +326,13 @@ nike_data_analysis/
 
 ---
 
-## 📞 Contact & Portfolio
+## Contact & Portfolio
 
 This project demonstrates comprehensive data science capabilities including data engineering, statistical analysis, business intelligence, and strategic consulting. The combination of technical expertise and business acumen showcased here represents the kind of value-driven analytics that drives modern business success.
 
-**🔗 Portfolio Link:** [https://davidolunloyo.onrender.com/]
-**📧 Contact:** [olunloyooladipupo@gmail.com]
-**💼 LinkedIn:** [https://www.linkedin.com/in/oladipupo-olunloyo-david/]
+**Portfolio Link:** [https://davidolunloyo.onrender.com/]
+**Contact:** [olunloyooladipupo@gmail.com]
+**LinkedIn:** [https://www.linkedin.com/in/oladipupo-olunloyo-david/]
 
 ---
 
