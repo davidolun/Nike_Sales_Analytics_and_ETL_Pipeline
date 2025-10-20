@@ -13,8 +13,7 @@ This comprehensive end-to-end data project transforms raw Nike sales data (2,123
 
 ---
 
-### Executive Dashboard
-[📈 **Live Tableau Dashboard**](https://public.tableau.com/app/profile/david.david2785/viz/Book1_17607576600600/Dashboard1)
+
 
   
 ## 🛠️ Technologies & Tools Used
@@ -99,6 +98,8 @@ The raw dataset contained **2,123 transactions** across multiple dimensions:
 
 **📊 Final Clean Dataset:** 2,123 high-quality transactions ready for analysis
 
+**ETL Pipeline:** Located in `scripts/etl_pipeline_nike_sales.py` - Automated data cleaning and validation pipeline
+*Automated data cleaning, validation, and processing pipeline with comprehensive logging and monitoring*
 ---
 
 ## 🎯 Key Business Insights & Data Storytelling

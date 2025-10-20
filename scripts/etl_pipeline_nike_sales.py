@@ -79,7 +79,7 @@ def transform_data(df):
 # Loading
 # --------------------------
 def load_data(df, csv_path=None,):
-    """Save the cleaned dataset to CSV and/or SQLite database."""
+    """Save the cleaned dataset to CSV ."""
     if csv_path:
         df.to_csv(csv_path, index=False)
         print(f"✅ Data saved to CSV: {csv_path}")
